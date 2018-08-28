@@ -19,7 +19,7 @@ const firebase_config = {
 };
 firebase.initializeApp(firebase_config);
 
-const firebase_token = process.env.ENV_VARIABLE;
+const firebase_token = process.env.GAME_FIREBASE_TOKEN;
 
 firebase.auth().signInWithCustomToken(firebase_token).catch(function(error) {
     console.log(`Firebase login error ${error.code}: ${error.message}`);
